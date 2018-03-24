@@ -64,7 +64,7 @@ body.landing {
 .links-container .navbar-link:active {
 	color: rgb(233,50,117);
 	background-color:white;
-	
+
 }
 
 .hero {
@@ -120,6 +120,10 @@ body.landing {
 .container {
 	margin: 0 auto;
 	max-width: 64rem;
+}
+
+.container.narrow {
+	max-width: 56rem;
 }
 
 .clearfix::after {
