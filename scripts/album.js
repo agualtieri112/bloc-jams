@@ -94,13 +94,22 @@ var albumJT = {
 };
 
 var findParentByClassName = function(element, targetClass) {
+	var currentParent = element.parentElement;
 	if (element) {
-		var currentParent = element.parentElement;
+		if (currentParent === null) {
+ 		console.log("No Parent Found.");
+	}
 		while (currentParent.className !== targetClass && currentParent.className !== null) {
 			currentParent = currentParent.parentElement;
 		}
-		return currentParent;
+		if (currentParent.className === targetClass) {
+ 		return currentParent;
 	}
+		else {
+ 		console.log("No Parent Found With That Class Name.");
+	}
+}
+
 };
 
 var getSongItem = function(element) {
