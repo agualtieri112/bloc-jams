@@ -150,8 +150,8 @@ var clickHandler = function(targetElement) {
 window.onload = function() {
 	setCurrentAlbum(albumMichealScott);
 
- var albums = [albumPicasso, albumMarconi, albumJT, albumMichealScott];
- var index = 1;
+	 var albums = [albumPicasso, albumMarconi, albumJT, albumMichealScott];
+	 var index = 1;
 	albumImage.addEventListener("click", function(event) {
 		setCurrentAlbum(albums[index]);
 		index++;
@@ -167,16 +167,16 @@ window.onload = function() {
 				songItem.innerHTML = playButtonTemplate;
 			}
 		}
-		});
+	});
 
-		for (var i = 0; i < songRows.length; i++) {
+	for (var i = 0; i < songRows.length; i++) {
 		songRows[i].addEventListener('mouseleave', function(event) {
 			var songItem = getSongItem(event.target);
 			var songItemNumber = songItem.getAttribute('data-song-number');
 			if (songItemNumber !== currentlyPlayingSong) {
-			songItem.innerHTML = songItemNumber;
+				songItem.innerHTML = songItemNumber;
 			}
-					 		});
+		});
 
 		songRows[i].addEventListener('click', function(event) {
 			clickHandler(event.target);
