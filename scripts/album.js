@@ -127,7 +127,7 @@ $(document).ready(function() {
 		 $albumReleaseInfo.text(album.year + ' ' + album.label)
 		 $albumImage.attr('src', album.albumArtUrl);
 
-		$albumSongList.empty;
+		$albumSongList.empty();
 
 
 		for (var i = 0; i < album.songs.length; i++) {
