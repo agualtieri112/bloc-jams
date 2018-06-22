@@ -122,12 +122,12 @@ var setCurrentTimeInPlayerBar = function(currentTime) {
 };
 
 var setTotalTimeInPlayerBar = function(totalTime) {
-    var $totalTimeElement = $('.seek-control .total-time');
+    var $totalTimeElement = $filterTimeCode('.seek-control .total-time');
     $totalTimeElement.text(totalTime);
 };
 
 var filterTimeCode = function(timeInSeconds) {
-    var seconds = Number.parseFloat(timeInSeconds);
+	var seconds = Number.parseFloat(timeInSeconds);
     var wholeSeconds = Math.floor(seconds);
     var minutes = Math.floor(wholeSeconds / 60);
 
