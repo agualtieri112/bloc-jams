@@ -114,6 +114,8 @@ var setCurrentAlbum = function(album) {
      }
 };
 
+// Assignment begins here
+
 var setCurrentTimeInPlayerBar = function(currentTime) {
     var $currentTimeElement = $('.seek-control .current-time');
     $currentTimeElement.text(currentTime);
